@@ -1,803 +1,1645 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DELLUNA Cook & Grills Kaduna | Premium Dining, Grills & Pizza</title>
-<meta name="description" content="DELLUNA Cook and Grills Kaduna — premium dine-in, kerbside pickup & delivery at 21 Kashim Ibrahim Road, Ungwan Rimi, Kaduna. Grills, pizza, chef specials in a spacious, elegant setting.">
-<meta property="og:title" content="DELLUNA Cook & Grills Kaduna">
-<meta property="og:description" content="Premium grill house & restaurant in Ungwan Rimi, Kaduna. Reserve your table today.">
-<meta property="og:type" content="restaurant.restaurant">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --charcoal:#14100D;
-    --charcoal-2:#1C1712;
-    --stone:#2A231D;
-    --ember:#C65D2E;
-    --ember-deep:#7A2E1D;
-    --gold:#C9A227;
-    --cream:#EDE6DA;
-    --cream-dim:#B9AF9F;
-    --line:rgba(237,230,218,0.12);
-    --radius:2px;
-  }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    background:var(--charcoal);
-    color:var(--cream);
-    font-family:'Manrope',sans-serif;
-    line-height:1.6;
-    overflow-x:hidden;
-  }
-  @media (prefers-reduced-motion: reduce){
-    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; scroll-behavior:auto !important;}
-  }
-  h1,h2,h3,.display{font-family:'Fraunces',serif;font-weight:500;letter-spacing:-0.01em;}
-  .eyebrow{
-    font-family:'Space Mono',monospace;
-    font-size:0.72rem;
-    letter-spacing:0.18em;
-    text-transform:uppercase;
-    color:var(--gold);
-  }
-  a{color:inherit;text-decoration:none;}
-  img{max-width:100%;display:block;}
-  .container{width:100%;max-width:1180px;margin:0 auto;padding:0 24px;}
-  ::selection{background:var(--ember);color:var(--cream);}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Era Eatery — Daura's Best Dining Experience</title>
+    <meta name="description" content="New Era Eatery - Daura's premier restaurant. Enjoy delicious local and continental dishes in a warm, hygienic environment. Dine-in and takeaway available." />
+    <link rel="canonical" href="https://neweraeatery.com.ng/" />
+    <meta property="og:title" content="New Era Eatery — Daura's Best Dining Experience" />
+    <meta property="og:description" content="New Era Eatery - Daura's premier restaurant. Enjoy delicious local and continental dishes in a warm, hygienic environment." />
+    <meta property="og:type" content="restaurant" />
+    <style>
+        /* ----- CSS Variables ----- */
+        :root {
+            --coral: #E8694A;
+            --coral-light: #F08A6A;
+            --coral-dark: #C94F30;
+            --cream: #FDF6F0;
+            --cream-dark: #F5EAE0;
+            --navy: #1A2A3A;
+            --navy-light: #2A4A5A;
+            --white: #FFFFFF;
+            --white-muted: #F5F0EB;
+            --gray-muted: #A89888;
+            --text-dark: #1A2A3A;
+            --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
 
-  /* Grate-line signature motif */
-  .grate{
-    display:flex;gap:6px;width:56px;height:14px;
-  }
-  .grate span{flex:1;background:var(--gold);opacity:0.55;border-radius:1px;}
-  .grate.center{margin:0 auto;}
+        /* ----- Reset & Base ----- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  /* Announcement bar */
-  .announce{
-    background:linear-gradient(90deg,var(--ember-deep),var(--ember));
-    color:var(--cream);
-    font-family:'Space Mono',monospace;
-    font-size:0.72rem;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    padding:9px 0;
-    overflow:hidden;
-    white-space:nowrap;
-    position:relative;
-  }
-  .announce-track{
-    display:inline-flex;
-    animation:marquee 26s linear infinite;
-  }
-  .announce-track span{padding:0 32px;display:inline-flex;align-items:center;gap:10px;}
-  @keyframes marquee{
-    0%{transform:translateX(0);}
-    100%{transform:translateX(-50%);}
-  }
+        html {
+            scroll-behavior: smooth;
+        }
 
-  /* Nav */
-  header{
-    position:sticky;top:0;z-index:100;
-    background:rgba(20,16,13,0.88);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--line);
-  }
-  nav{
-    display:flex;align-items:center;justify-content:space-between;
-    padding:16px 24px;max-width:1180px;margin:0 auto;
-  }
-  .logo{
-    font-family:'Fraunces',serif;font-size:1.35rem;font-weight:600;
-    letter-spacing:0.02em;color:var(--cream);
-    display:flex;flex-direction:column;line-height:1;
-  }
-  .logo small{font-family:'Space Mono',monospace;font-size:0.55rem;letter-spacing:0.22em;color:var(--gold);margin-top:5px;}
-  .nav-links{display:flex;gap:34px;list-style:none;}
-  .nav-links a{
-    font-size:0.88rem;font-weight:500;color:var(--cream-dim);
-    position:relative;padding:4px 0;transition:color 0.25s;
-  }
-  .nav-links a:hover,.nav-links a:focus-visible{color:var(--gold);}
-  .nav-links a::after{
-    content:'';position:absolute;bottom:0;left:0;width:0;height:1px;
-    background:var(--gold);transition:width 0.25s;
-  }
-  .nav-links a:hover::after{width:100%;}
-  .nav-cta{
-    display:flex;align-items:center;gap:14px;
-  }
-  .btn{
-    display:inline-flex;align-items:center;gap:8px;
-    font-family:'Manrope',sans-serif;font-weight:700;font-size:0.85rem;
-    padding:12px 24px;border-radius:var(--radius);cursor:pointer;
-    border:1px solid transparent;transition:all 0.25s;white-space:nowrap;
-  }
-  .btn-primary{background:var(--ember);color:var(--cream);}
-  .btn-primary:hover{background:#D96C3A;transform:translateY(-1px);}
-  .btn-outline{border-color:var(--gold);color:var(--gold);background:transparent;}
-  .btn-outline:hover{background:var(--gold);color:var(--charcoal);}
-  .btn-ghost{color:var(--cream);border-color:var(--line);background:transparent;}
-  .btn-ghost:hover{border-color:var(--gold);color:var(--gold);}
+        body {
+            font-family: 'Segoe UI', 'Helvetica Neue', system-ui, -apple-system, sans-serif;
+            background: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
 
-  .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;}
-  .hamburger span{width:24px;height:2px;background:var(--cream);transition:0.3s;}
-  .mobile-menu{
-    display:none;flex-direction:column;gap:2px;
-    background:var(--charcoal-2);border-top:1px solid var(--line);
-    padding:12px 24px 20px;
-  }
-  .mobile-menu.open{display:flex;}
-  .mobile-menu a{padding:12px 0;border-bottom:1px solid var(--line);font-size:0.95rem;color:var(--cream-dim);}
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
 
-  /* Hero */
-  .hero{
-    position:relative;min-height:92vh;display:flex;align-items:center;
-    background:radial-gradient(ellipse 80% 60% at 50% 20%, rgba(198,93,46,0.16), transparent 60%),
-               linear-gradient(180deg,var(--charcoal) 0%,#0F0C09 100%);
-    overflow:hidden;padding-top:60px;
-  }
-  .ember-field{position:absolute;inset:0;pointer-events:none;}
-  .ember-dot{
-    position:absolute;bottom:-10px;border-radius:50%;
-    background:radial-gradient(circle,var(--gold),var(--ember) 70%,transparent 100%);
-    opacity:0;animation:rise 9s linear infinite;
-  }
-  @keyframes rise{
-    0%{transform:translateY(0) translateX(0);opacity:0;}
-    10%{opacity:0.85;}
-    90%{opacity:0.3;}
-    100%{transform:translateY(-95vh) translateX(var(--drift,20px));opacity:0;}
-  }
-  .hero-inner{position:relative;z-index:2;max-width:1180px;margin:0 auto;padding:60px 24px;
-    display:grid;grid-template-columns:1.1fr 0.9fr;gap:60px;align-items:center;}
-  .hero-tag{
-    display:inline-flex;align-items:center;gap:10px;
-    border:1px solid var(--line);padding:8px 16px;border-radius:100px;
-    margin-bottom:24px;
-  }
-  .hero h1{font-size:clamp(2.6rem,5.5vw,4.4rem);line-height:1.04;margin-bottom:22px;}
-  .hero h1 em{font-style:italic;color:var(--ember);font-weight:500;}
-  .hero p.lead{font-size:1.08rem;color:var(--cream-dim);max-width:480px;margin-bottom:36px;}
-  .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:40px;}
-  .hero-meta{display:flex;gap:32px;flex-wrap:wrap;}
-  .hero-meta div{display:flex;flex-direction:column;gap:4px;}
-  .hero-meta .num{font-family:'Space Mono',monospace;color:var(--gold);font-size:1.1rem;}
-  .hero-meta .lbl{font-size:0.75rem;color:var(--cream-dim);letter-spacing:0.05em;}
+        /* ----- Loader ----- */
+        #loader {
+            position: fixed;
+            inset: 0;
+            background: var(--navy);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.7s ease, visibility 0.7s ease;
+        }
+        #loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .loader-text {
+            font-size: 1.2rem;
+            letter-spacing: 6px;
+            color: var(--white-muted);
+            font-weight: 300;
+            animation: pulse 1.4s ease-in-out infinite;
+        }
+        .loader-text span {
+            color: var(--coral);
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 1; }
+        }
 
-  .hero-visual{
-    position:relative;aspect-ratio:4/5;border-radius:var(--radius);
-    background:
-      repeating-linear-gradient(0deg, rgba(0,0,0,0.35) 0px, rgba(0,0,0,0.35) 2px, transparent 2px, transparent 34px),
-      linear-gradient(150deg,#3A2416,#1C1108 55%,#0F0906);
-    border:1px solid var(--line);overflow:hidden;
-    display:flex;align-items:flex-end;padding:24px;
-  }
-  .hero-visual::before{
-    content:'';position:absolute;inset:0;
-    background:radial-gradient(circle at 70% 30%, rgba(198,93,46,0.35), transparent 55%);
-  }
-  .hero-visual .cap{position:relative;z-index:2;font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--cream-dim);letter-spacing:0.05em;}
+        /* ----- Navigation ----- */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 14px 0;
+            background: rgba(26, 42, 58, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            z-index: 1000;
+            transition: background 0.3s, padding 0.3s;
+        }
+        nav.scrolled {
+            padding: 8px 0;
+            background: rgba(26, 42, 58, 0.96);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo span {
+            color: var(--coral);
+        }
+        .logo .sub {
+            font-size: 0.55rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            color: var(--white-muted);
+            opacity: 0.4;
+        }
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-links a {
+            color: var(--white-muted);
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+            position: relative;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--coral);
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+            left: 0;
+        }
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--white);
+        }
+        .nav-cta {
+            background: var(--coral);
+            color: var(--white) !important;
+            padding: 8px 24px;
+            border-radius: 30px;
+            font-weight: 600 !important;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-size: 0.65rem !important;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .nav-cta::after {
+            display: none !important;
+        }
+        .nav-cta:hover {
+            background: var(--coral-light);
+            transform: scale(1.02);
+            color: var(--white) !important;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+        .hamburger span {
+            width: 28px;
+            height: 2px;
+            background: var(--white);
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
 
-  /* Sections generic */
-  section{padding:110px 0;}
-  .section-head{max-width:640px;margin-bottom:56px;}
-  .section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
-  .section-head h2{font-size:clamp(1.9rem,3.4vw,2.7rem);margin:14px 0 16px;}
-  .section-head p{color:var(--cream-dim);font-size:1rem;}
+        /* ----- Hero ----- */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 0 60px;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 60%;
+            height: 80%;
+            background: radial-gradient(ellipse, rgba(232, 105, 74, 0.06), transparent 70%);
+            pointer-events: none;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--coral), transparent, var(--coral));
+            opacity: 0.15;
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        .hero-content {
+            padding: 20px 0;
+        }
+        .hero-tag {
+            display: inline-block;
+            font-size: 0.65rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 20px;
+            padding: 4px 16px;
+            border: 1px solid rgba(232, 105, 74, 0.15);
+            font-weight: 300;
+        }
+        .hero-content h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 1.05;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+            color: var(--white);
+        }
+        .hero-content h1 span {
+            color: var(--coral);
+        }
+        .hero-content .subtitle {
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: var(--white-muted);
+            max-width: 500px;
+            margin-bottom: 32px;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
+            background: var(--coral);
+            color: var(--white);
+            padding: 14px 38px;
+            font-weight: 600;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border-radius: 30px;
+        }
+        .btn-primary:hover {
+            background: var(--coral-light);
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            padding: 14px 38px;
+            font-weight: 300;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: border-color 0.3s, color 0.3s, transform 0.2s;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 30px;
+        }
+        .btn-secondary:hover {
+            border-color: var(--coral);
+            color: var(--coral);
+            transform: translateY(-2px);
+        }
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 32px;
+        }
+        .hero-stats .stat {
+            display: flex;
+            flex-direction: column;
+        }
+        .hero-stats .stat .number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--coral);
+            line-height: 1;
+        }
+        .hero-stats .stat .label {
+            font-size: 0.65rem;
+            letter-spacing: 1px;
+            color: var(--white-muted);
+            opacity: 0.5;
+            text-transform: uppercase;
+        }
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero-image .placeholder-img {
+            width: 100%;
+            max-width: 500px;
+            aspect-ratio: 1/1;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            text-align: center;
+            padding: 40px;
+            gap: 16px;
+        }
+        .hero-image .placeholder-img .food-icon {
+            opacity: 0.3;
+        }
+        .hero-image .placeholder-img .brand-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+            color: var(--white);
+            opacity: 0.15;
+        }
+        .hero-image .placeholder-img .brand-text span {
+            color: var(--coral);
+            opacity: 0.3;
+        }
+        .hero-image .placeholder-img .tiny-text {
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            color: var(--white-muted);
+            opacity: 0.15;
+            margin-top: 4px;
+        }
 
-  /* About */
-  .about{background:var(--charcoal-2);}
-  .about-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:64px;align-items:center;}
-  .about-visual{
-    aspect-ratio:1/1.1;border:1px solid var(--gold);position:relative;padding:14px;
-  }
-  .about-visual-inner{
-    width:100%;height:100%;
-    background:linear-gradient(160deg,#241A12,#120D0A);
-    display:flex;align-items:center;justify-content:center;position:relative;
-  }
-  .about-visual-inner span{font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--cream-dim);letter-spacing:0.05em;text-align:center;padding:20px;}
-  .about-points{display:grid;gap:28px;margin-top:32px;}
-  .about-point{display:flex;gap:18px;}
-  .about-point .grate{flex-shrink:0;margin-top:6px;}
-  .about-point h3{font-size:1.1rem;margin-bottom:6px;font-weight:600;}
-  .about-point p{color:var(--cream-dim);font-size:0.94rem;}
+        /* ----- Section Common ----- */
+        section {
+            padding: 80px 0;
+        }
+        .section-title {
+            font-size: 2.6rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+            color: var(--navy);
+        }
+        .section-title span {
+            color: var(--coral);
+        }
+        .section-sub {
+            color: var(--gray-muted);
+            font-weight: 400;
+            max-width: 600px;
+            font-size: 1.05rem;
+            margin-bottom: 48px;
+        }
+        .center-text {
+            text-align: center;
+        }
+        .center-text .section-sub {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .section-divider {
+            width: 60px;
+            height: 3px;
+            background: var(--coral);
+            margin: 16px auto 24px;
+            opacity: 0.4;
+        }
+        .center-text .section-divider {
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-  /* Menu */
-  .menu-tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:44px;}
-  .tab-btn{
-    font-family:'Space Mono',monospace;font-size:0.75rem;letter-spacing:0.05em;text-transform:uppercase;
-    padding:10px 18px;border:1px solid var(--line);border-radius:100px;background:transparent;color:var(--cream-dim);
-    cursor:pointer;transition:0.25s;
-  }
-  .tab-btn.active,.tab-btn:hover{border-color:var(--ember);color:var(--cream);background:rgba(198,93,46,0.12);}
-  .menu-panel{display:none;}
-  .menu-panel.active{display:block;animation:fadeIn 0.4s ease;}
-  @keyframes fadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
-  .menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
-  .menu-item{background:var(--charcoal);padding:28px;display:flex;justify-content:space-between;gap:18px;transition:background 0.25s;}
-  .menu-item:hover{background:var(--charcoal-2);}
-  .menu-item-name{font-family:'Fraunces',serif;font-size:1.15rem;font-weight:500;margin-bottom:6px;}
-  .menu-item-desc{font-size:0.86rem;color:var(--cream-dim);}
-  .menu-item-price{font-family:'Space Mono',monospace;color:var(--gold);font-size:0.95rem;white-space:nowrap;}
-  .menu-note{
-    margin-top:28px;font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--cream-dim);
-    border-left:2px solid var(--gold);padding-left:14px;
-  }
+        /* ----- About ----- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .about-image {
+            background: linear-gradient(135deg, var(--navy), var(--navy-light));
+            border-radius: 20px;
+            aspect-ratio: 4/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(232, 105, 74, 0.06);
+            flex-direction: column;
+            gap: 12px;
+            color: var(--white-muted);
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .about-image .big-number {
+            font-size: 6rem;
+            font-weight: 700;
+            color: var(--coral);
+            opacity: 0.15;
+            line-height: 1;
+        }
+        .about-image .overlay-text {
+            font-size: 1.4rem;
+            font-weight: 300;
+            letter-spacing: 4px;
+            color: var(--white);
+            opacity: 0.5;
+        }
+        .about-text p {
+            color: var(--text-dark);
+            font-weight: 400;
+            margin-bottom: 16px;
+            font-size: 1.05rem;
+        }
+        .about-stats {
+            display: flex;
+            gap: 48px;
+            margin-top: 28px;
+        }
+        .stat-number {
+            font-size: 2.6rem;
+            font-weight: 700;
+            color: var(--coral);
+            line-height: 1;
+        }
+        .stat-label {
+            font-size: 0.75rem;
+            letter-spacing: 1.5px;
+            color: var(--gray-muted);
+            text-transform: uppercase;
+            font-weight: 400;
+        }
 
-  /* Why visit */
-  .why{background:var(--charcoal-2);}
-  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
-  .why-card{background:var(--charcoal);padding:38px 28px;transition:0.3s;}
-  .why-card:hover{background:var(--charcoal-2);transform:translateY(-4px);}
-  .why-card .icon{font-size:1.6rem;margin-bottom:20px;display:block;}
-  .why-card h3{font-size:1.05rem;margin-bottom:10px;font-weight:600;}
-  .why-card p{font-size:0.87rem;color:var(--cream-dim);}
+        /* ----- Menu Preview ----- */
+        #menu {
+            background: var(--cream);
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+        .menu-card {
+            background: var(--white);
+            padding: 28px 24px;
+            border-radius: 16px;
+            border: 1px solid rgba(26, 42, 58, 0.04);
+            transition: transform 0.4s ease, box-shadow 0.4s, border-color 0.3s;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+        }
+        .menu-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--coral);
+            box-shadow: 0 12px 40px rgba(232, 105, 74, 0.06);
+        }
+        .menu-card .icon-wrap {
+            display: inline-flex;
+            margin-bottom: 12px;
+            opacity: 0.4;
+        }
+        .menu-card h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 4px;
+        }
+        .menu-card p {
+            color: var(--gray-muted);
+            font-weight: 400;
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+        }
+        .menu-card .price {
+            display: inline-block;
+            background: var(--coral);
+            color: var(--white);
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .menu-card .view-link {
+            display: inline-block;
+            margin-top: 12px;
+            color: var(--coral);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.85rem;
+            transition: color 0.3s;
+        }
+        .menu-card .view-link:hover {
+            color: var(--coral-dark);
+        }
 
-  /* Gallery */
-  .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:180px;gap:14px;}
-  .gallery-grid a:nth-child(1){grid-column:span 2;grid-row:span 2;}
-  .gallery-grid a:nth-child(4){grid-row:span 2;}
-  .gallery-item{
-    position:relative;overflow:hidden;border-radius:var(--radius);cursor:pointer;
-    background:linear-gradient(150deg,var(--stone),#150F0B);
-    display:flex;align-items:flex-end;
-  }
-  .gallery-item::before{
-    content:'';position:absolute;inset:0;
-    background:radial-gradient(circle at 30% 20%, rgba(201,162,39,0.18), transparent 60%);
-    transition:0.4s;
-  }
-  .gallery-item:hover::before{background:radial-gradient(circle at 30% 20%, rgba(198,93,46,0.32), transparent 60%);}
-  .gallery-cap{position:relative;z-index:2;padding:16px;font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--cream-dim);}
+        /* ----- Why Choose ----- */
+        #why {
+            background: var(--navy);
+            color: var(--white);
+        }
+        #why .section-title {
+            color: var(--white);
+        }
+        #why .section-title span {
+            color: var(--coral);
+        }
+        #why .section-sub {
+            color: var(--white-muted);
+        }
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+        .why-item {
+            text-align: center;
+            padding: 28px 20px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 16px;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .why-item:hover {
+            transform: translateY(-4px);
+            border-color: rgba(232, 105, 74, 0.15);
+        }
+        .why-item .icon-wrap {
+            display: inline-flex;
+            margin-bottom: 14px;
+            opacity: 0.5;
+        }
+        .why-item h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--white);
+        }
+        .why-item p {
+            color: var(--white-muted);
+            font-weight: 300;
+            font-size: 0.9rem;
+        }
 
-  /* Reviews */
-  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
-  .review-card{
-    border:1px solid var(--line);padding:34px 28px;border-radius:var(--radius);
-    background:var(--charcoal-2);
-  }
-  .stars{color:var(--gold);letter-spacing:2px;margin-bottom:16px;font-size:0.95rem;}
-  .review-card h3{font-size:1.05rem;margin-bottom:10px;font-weight:600;}
-  .review-card p{font-size:0.88rem;color:var(--cream-dim);}
-  .rating-strip{
-    display:flex;align-items:center;gap:16px;margin-top:48px;padding-top:32px;border-top:1px solid var(--line);
-    font-family:'Space Mono',monospace;font-size:0.8rem;color:var(--cream-dim);flex-wrap:wrap;
-  }
-  .rating-strip strong{color:var(--gold);font-size:1.1rem;}
+        /* ----- Testimonials ----- */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .testimonial-card {
+            padding: 28px 28px;
+            background: var(--white);
+            border: 1px solid rgba(26, 42, 58, 0.04);
+            border-radius: 16px;
+            transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+        }
+        .testimonial-card:hover {
+            border-color: var(--coral);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(232, 105, 74, 0.04);
+        }
+        .testimonial-card .stars {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 12px;
+        }
+        .testimonial-card blockquote {
+            font-weight: 400;
+            color: var(--text-dark);
+            font-style: italic;
+            margin: 12px 0;
+            font-size: 0.95rem;
+        }
+        .testimonial-card .author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 12px;
+        }
+        .testimonial-card .avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--cream-dark);
+            border: 1px solid rgba(232, 105, 74, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: var(--coral);
+            font-size: 0.9rem;
+        }
+        .testimonial-card cite {
+            font-style: normal;
+            color: var(--gray-muted);
+            font-size: 0.85rem;
+            font-weight: 400;
+        }
+        .testimonial-card .response {
+            margin-top: 12px;
+            padding: 12px 16px;
+            background: var(--cream);
+            border-radius: 8px;
+            font-size: 0.85rem;
+            color: var(--gray-muted);
+            font-style: italic;
+            border-left: 3px solid var(--coral);
+        }
 
-  /* Reservation */
-  .reserve{
-    background:linear-gradient(180deg,var(--charcoal-2),var(--charcoal));
-    position:relative;
-  }
-  .reserve-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:64px;align-items:start;}
-  .reserve-info h2{font-size:clamp(1.9rem,3.4vw,2.6rem);margin:14px 0 20px;}
-  .reserve-info p{color:var(--cream-dim);margin-bottom:28px;}
-  .reserve-info .btn{margin-right:12px;margin-bottom:12px;}
-  form.reserve-form{
-    border:1px solid var(--line);padding:36px;border-radius:var(--radius);background:var(--charcoal-2);
-  }
-  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;}
-  .field{display:flex;flex-direction:column;gap:8px;}
-  .field.full{grid-column:1/-1;}
-  .field label{font-family:'Space Mono',monospace;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--cream-dim);}
-  .field input,.field select{
-    background:var(--charcoal);border:1px solid var(--line);color:var(--cream);
-    padding:13px 14px;border-radius:var(--radius);font-family:'Manrope',sans-serif;font-size:0.92rem;
-    transition:border-color 0.25s;
-  }
-  .field input:focus,.field select:focus{outline:none;border-color:var(--gold);}
-  .reserve-form .btn{width:100%;justify-content:center;margin-top:8px;}
+        /* ----- Gallery ----- */
+        #gallery {
+            background: var(--cream);
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+        }
+        .gallery-item {
+            aspect-ratio: 1/1;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(26, 42, 58, 0.04);
+            transition: transform 0.4s ease, box-shadow 0.4s, border-color 0.3s;
+            cursor: pointer;
+            background: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray-muted);
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+        .gallery-item:hover {
+            transform: scale(1.02);
+            border-color: var(--coral);
+            box-shadow: 0 8px 30px rgba(232, 105, 74, 0.06);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .gallery-item .overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(26, 42, 58, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+        .gallery-item .overlay span {
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            color: var(--white);
+            font-weight: 300;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 6px 20px;
+            border-radius: 20px;
+        }
 
-  /* Contact */
-  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);}
-  .contact-block{background:var(--charcoal);padding:44px;}
-  .contact-block h3{font-size:1.1rem;margin-bottom:18px;font-weight:600;}
-  .contact-block p,.contact-block a{color:var(--cream-dim);font-size:0.92rem;margin-bottom:8px;display:block;}
-  .contact-block a:hover{color:var(--gold);}
-  .map-placeholder{
-    height:100%;min-height:280px;
-    background:repeating-linear-gradient(45deg, rgba(237,230,218,0.03) 0px, rgba(237,230,218,0.03) 1px, transparent 1px, transparent 16px), var(--stone);
-    display:flex;align-items:center;justify-content:center;
-    font-family:'Space Mono',monospace;font-size:0.75rem;color:var(--cream-dim);text-align:center;padding:20px;
-  }
-  .hours-list{display:grid;gap:8px;font-family:'Space Mono',monospace;font-size:0.82rem;}
-  .hours-list div{display:flex;justify-content:space-between;color:var(--cream-dim);border-bottom:1px dashed var(--line);padding-bottom:8px;}
+        /* ----- FAQ ----- */
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: var(--white);
+            margin-bottom: 8px;
+            border-radius: 12px;
+            border: 1px solid rgba(26, 42, 58, 0.04);
+            overflow: hidden;
+            transition: border-color 0.3s;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+        }
+        .faq-item:hover {
+            border-color: rgba(232, 105, 74, 0.15);
+        }
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 18px 24px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--navy);
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s;
+        }
+        .faq-question:hover {
+            background: rgba(232, 105, 74, 0.02);
+        }
+        .faq-question .arrow {
+            transition: transform 0.3s;
+            display: inline-flex;
+            color: var(--coral);
+            opacity: 0.5;
+        }
+        .faq-item.active .faq-question .arrow {
+            transform: rotate(180deg);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s;
+            padding: 0 24px;
+            color: var(--gray-muted);
+            font-weight: 400;
+            font-size: 0.95rem;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding: 0 24px 20px;
+        }
 
-  /* Footer */
-  footer{background:#0E0B08;padding:70px 0 30px;}
-  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:56px;}
-  .footer-brand .logo{margin-bottom:14px;}
-  .footer-brand p{color:var(--cream-dim);font-size:0.88rem;max-width:280px;}
-  .footer-col h4{font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
-  .footer-col a{display:block;color:var(--cream-dim);font-size:0.88rem;margin-bottom:12px;transition:color 0.2s;}
-  .footer-col a:hover{color:var(--cream);}
-  .footer-bottom{
-    border-top:1px solid var(--line);padding-top:26px;
-    display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;
-    font-size:0.78rem;color:var(--cream-dim);
-  }
-  .disclaimer{
-    font-family:'Space Mono',monospace;font-size:0.68rem;color:var(--cream-dim);
-    max-width:900px;margin-top:18px;line-height:1.7;opacity:0.7;
-  }
+        /* ----- Contact ----- */
+        #contact {
+            background: var(--cream);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        .contact-info p {
+            color: var(--text-dark);
+            font-weight: 400;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.95rem;
+        }
+        .contact-info .label {
+            color: var(--navy);
+            min-width: 70px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            opacity: 0.5;
+        }
+        .contact-info .icon-wrap {
+            display: inline-flex;
+            width: 24px;
+            flex-shrink: 0;
+            color: var(--coral);
+            opacity: 0.5;
+        }
+        .contact-info a {
+            color: var(--navy);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .contact-info a:hover {
+            color: var(--coral);
+        }
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 14px 18px;
+            margin-bottom: 16px;
+            background: var(--white);
+            border: 1px solid rgba(26, 42, 58, 0.06);
+            border-radius: 12px;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            font-weight: 400;
+            appearance: none;
+        }
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            outline: none;
+            border-color: var(--coral);
+            box-shadow: 0 0 0 3px rgba(232, 105, 74, 0.06);
+        }
+        .contact-form textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+        .contact-form select option {
+            color: var(--text-dark);
+            background: var(--white);
+        }
+        .contact-form button {
+            background: var(--coral);
+            color: var(--white);
+            border: none;
+            padding: 14px 36px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .contact-form button:hover {
+            background: var(--coral-light);
+            transform: translateY(-2px);
+        }
+        .map-placeholder {
+            width: 100%;
+            height: 250px;
+            background: var(--cream-dark);
+            border-radius: 16px;
+            border: 1px solid rgba(26, 42, 58, 0.04);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray-muted);
+            font-size: 0.8rem;
+            margin-top: 24px;
+            overflow: hidden;
+        }
+        .map-placeholder iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
 
-  /* Floating WhatsApp */
-  .whatsapp-float{
-    position:fixed;bottom:26px;right:26px;z-index:200;
-    width:58px;height:58px;border-radius:50%;
-    background:#25D366;display:flex;align-items:center;justify-content:center;
-    box-shadow:0 8px 24px rgba(0,0,0,0.4);
-    transition:transform 0.25s;
-  }
-  .whatsapp-float:hover{transform:scale(1.08);}
-  .whatsapp-float svg{width:28px;height:28px;fill:#fff;}
+        /* ----- Footer ----- */
+        footer {
+            background: var(--navy);
+            border-top: 1px solid rgba(255, 255, 255, 0.02);
+            padding: 40px 0 24px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        .footer-grid h4 {
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 12px;
+            opacity: 0.6;
+        }
+        .footer-grid p,
+        .footer-grid a {
+            color: var(--white-muted);
+            font-weight: 300;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .footer-grid a:hover {
+            color: var(--coral);
+        }
+        .footer-bottom {
+            text-align: center;
+            color: var(--white-muted);
+            font-size: 0.75rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.02);
+            padding-top: 20px;
+            opacity: 0.3;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+        .footer-bottom span {
+            color: var(--coral);
+            opacity: 0.7;
+        }
 
-  /* Scroll reveal */
-  .reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease;}
-  .reveal.in{opacity:1;transform:translateY(0);}
+        /* ----- Floating WhatsApp ----- */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #25D366;
+            color: #fff;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.2);
+            z-index: 999;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.06);
+            box-shadow: 0 8px 40px rgba(37, 211, 102, 0.3);
+        }
 
-  /* Responsive */
-  @media (max-width:980px){
-    .nav-links{display:none;}
-    .hamburger{display:flex;}
-    .hero-inner{grid-template-columns:1fr;}
-    .hero-visual{aspect-ratio:16/10;}
-    .about-grid,.reserve-grid,.contact-grid{grid-template-columns:1fr;}
-    .why-grid{grid-template-columns:repeat(2,1fr);}
-    .reviews-grid{grid-template-columns:1fr;}
-    .footer-grid{grid-template-columns:1fr 1fr;}
-    .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px;}
-    .gallery-grid a:nth-child(1){grid-column:span 2;grid-row:span 1;}
-  }
-  @media (max-width:600px){
-    .menu-grid{grid-template-columns:1fr;}
-    .form-row{grid-template-columns:1fr;}
-    .footer-grid{grid-template-columns:1fr;}
-    .why-grid{grid-template-columns:1fr;}
-    section{padding:76px 0;}
-    .contact-block{padding:30px;}
-  }
-</style>
+        /* ----- Back to Top ----- */
+        .back-top {
+            position: fixed;
+            bottom: 96px;
+            right: 24px;
+            background: var(--coral);
+            color: var(--white);
+            width: 44px;
+            height: 44px;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s, transform 0.3s, box-shadow 0.3s;
+            z-index: 998;
+            box-shadow: 0 4px 16px rgba(232, 105, 74, 0.2);
+        }
+        .back-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        .back-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(232, 105, 74, 0.3);
+        }
+
+        /* ----- Scroll Reveal ----- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .menu-card:nth-child(1) { transition-delay: 0.05s; }
+        .menu-card:nth-child(2) { transition-delay: 0.10s; }
+        .menu-card:nth-child(3) { transition-delay: 0.15s; }
+        .menu-card:nth-child(4) { transition-delay: 0.20s; }
+
+        .gallery-item:nth-child(1) { transition-delay: 0.04s; }
+        .gallery-item:nth-child(2) { transition-delay: 0.08s; }
+        .gallery-item:nth-child(3) { transition-delay: 0.12s; }
+        .gallery-item:nth-child(4) { transition-delay: 0.16s; }
+        .gallery-item:nth-child(5) { transition-delay: 0.20s; }
+        .gallery-item:nth-child(6) { transition-delay: 0.24s; }
+
+        .why-item:nth-child(1) { transition-delay: 0.05s; }
+        .why-item:nth-child(2) { transition-delay: 0.10s; }
+        .why-item:nth-child(3) { transition-delay: 0.15s; }
+        .why-item:nth-child(4) { transition-delay: 0.20s; }
+
+        .testimonial-card:nth-child(1) { transition-delay: 0.05s; }
+        .testimonial-card:nth-child(2) { transition-delay: 0.10s; }
+        .testimonial-card:nth-child(3) { transition-delay: 0.15s; }
+
+        /* ----- Responsive ----- */
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: var(--navy);
+                padding: 24px 0;
+                gap: 16px;
+                border-top: 1px solid rgba(255, 255, 255, 0.02);
+                margin-top: 12px;
+            }
+            .nav-links.open {
+                display: flex;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .hero-content h1 {
+                font-size: 2.4rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-buttons .btn-primary,
+            .hero-buttons .btn-secondary {
+                width: 100%;
+                justify-content: center;
+            }
+            .about-stats {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+            }
+            .hero-stats {
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+            .hero {
+                padding: 100px 0 40px;
+            }
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            }
+        }
+    </style>
 </head>
 <body>
 
-<div class="announce">
-  <div class="announce-track">
-    <span>🔥 Reserve Your Table</span>
-    <span>🍕 Order & Pickup Available</span>
-    <span>🚗 Delivery Across Kaduna</span>
-    <span>🔥 Reserve Your Table</span>
-    <span>🍕 Order & Pickup Available</span>
-    <span>🚗 Delivery Across Kaduna</span>
-  </div>
-</div>
+    <!-- LOADER -->
+    <div id="loader">
+        <div class="loader-text">NEW<span>·</span>ERA</div>
+    </div>
 
-<header>
-  <nav>
-    <a href="#home" class="logo">DELLUNA <small>COOK &amp; GRILLS · KADUNA</small></a>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#menu">Menu</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#reservations">Reservations</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div class="nav-cta">
-      <a href="tel:+2349040508888" class="btn btn-ghost" style="display:none" id="desktopCall">Call Us</a>
-      <a href="#reservations" class="btn btn-primary">Reserve a Table</a>
-      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#home">Home</a>
-    <a href="#menu">Menu</a>
-    <a href="#experience">Experience</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#reservations">Reservations</a>
-    <a href="#contact">Contact</a>
-    <a href="tel:+2349040508888">Call 0904 050 8888</a>
-  </div>
-</header>
-
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="ember-field" id="emberField"></div>
-  <div class="hero-inner">
-    <div>
-      <div class="hero-tag">
-        <span class="grate"><span></span><span></span><span></span><span></span></span>
-        <span class="eyebrow">Premium Grill House · Kaduna</span>
-      </div>
-      <h1>Fire, flavor, and <em>a table</em> worth reserving.</h1>
-      <p class="lead">A spacious, elegant dining room in Ungwan Rimi built for slow evenings, good grills, and better company. Dine-in, kerbside pickup, or delivery — your choice.</p>
-      <div class="hero-ctas">
-        <a href="#reservations" class="btn btn-primary">Reserve Your Table</a>
-        <a href="#menu" class="btn btn-outline">View Menu</a>
-      </div>
-      <div class="hero-meta">
-        <div><span class="num">₦10k–₦40k</span><span class="lbl">Per Person</span></div>
-        <div><span class="num">4.2 ★</span><span class="lbl">266+ Guest Ratings</span></div>
-        <div><span class="num">3 Ways</span><span class="lbl">Dine-in · Pickup · Delivery</span></div>
-      </div>
-    </div>
-    <div class="hero-visual reveal">
-      <span class="cap">GRILL STATION — PHOTO PLACEHOLDER<br>Replace with real plating / interior photography</span>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="about" id="experience">
-  <div class="container about-grid">
-    <div class="about-visual reveal">
-      <div class="about-visual-inner">
-        <span>INTERIOR PHOTO PLACEHOLDER<br>Large windows · natural light · spacious dining room</span>
-      </div>
-    </div>
-    <div>
-      <span class="eyebrow">The Experience</span>
-      <h2>A room built to be sat in, not rushed through.</h2>
-      <div class="about-points">
-        <div class="about-point reveal">
-          <span class="grate"><span></span><span></span><span></span><span></span></span>
-          <div>
-            <h3>Spacious, well-lit atmosphere</h3>
-            <p>Wide, naturally lit interiors designed for comfortable dine-in evenings, group gatherings, and quiet weekday lunches alike.</p>
-          </div>
+    <!-- NAVIGATION -->
+    <nav id="navbar" role="navigation">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E8694A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 3v9a3 3 0 0 0 3 3h1"/>
+                    <path d="M18 3v12a3 3 0 0 1-3 3h-1v-4"/>
+                    <path d="M10 15V3"/>
+                    <path d="M14 15V3"/>
+                </svg>
+                NEW<span>·</span>ERA
+                <span class="sub">| EATERY</span>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact" class="nav-cta">Order Now</a></li>
+            </ul>
         </div>
-        <div class="about-point reveal">
-          <span class="grate"><span></span><span></span><span></span><span></span></span>
-          <div>
-            <h3>Genuine food variety</h3>
-            <p>From grills and pizza to chef specials — a menu wide enough that regulars still find something new.</p>
-          </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-tag">Daura's Premier Eatery</div>
+                <h1>
+                    Welcome to the<br />
+                    <span>New Era</span> of Dining
+                </h1>
+                <p class="subtitle">Experience delicious local and continental dishes in a warm, hygienic environment. Dine in or take away.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn-primary">Order Now</a>
+                    <a href="#menu" class="btn-secondary">View Menu</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="number">4.1</span>
+                        <span class="label">Rating</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">8+</span>
+                        <span class="label">Reviews</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">2018</span>
+                        <span class="label">Established</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="placeholder-img">
+                    <svg class="food-icon" width="100" height="80" viewBox="0 0 24 24" fill="none" stroke="#E8694A" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="8"/>
+                        <path d="M4 4 L8 8 M20 4 L16 8 M4 20 L8 16 M20 20 L16 16"/>
+                        <path d="M9 9 L11 11 M13 13 L15 15"/>
+                    </svg>
+                    <div class="brand-text"><span>NEW</span>·ERA</div>
+                    <div class="tiny-text">Eatery · Daura</div>
+                </div>
+            </div>
         </div>
-        <div class="about-point reveal">
-          <span class="grate"><span></span><span></span><span></span><span></span></span>
-          <div>
-            <h3>Built for convenience</h3>
-            <p>Dine in, order kerbside pickup, or have it delivered — the same premium standard, wherever you're eating.</p>
-          </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="container about-grid">
+            <div class="about-image reveal">
+                <div class="big-number">✦</div>
+                <div class="overlay-text">NEW ERA EATERY</div>
+                <p style="color:var(--white-muted);font-weight:300;font-size:0.8rem;opacity:0.6;">Daura's Trusted Dining Spot</p>
+            </div>
+            <div class="about-text reveal">
+                <h2 class="section-title">About <span>New Era Eatery</span></h2>
+                <p>New Era Eatery is Daura's premier restaurant, dedicated to serving delicious, freshly prepared meals in a warm and welcoming atmosphere.</p>
+                <p>We take pride in our hygienic environment, friendly service, and commitment to quality. Whether you're here for a quick lunch, a family dinner, or a takeaway, we ensure every meal is prepared with care.</p>
+                <p>Our menu features a delightful mix of local and continental dishes, all made with fresh ingredients and served with a smile.</p>
+                <div class="about-stats">
+                    <div><div class="stat-number">4.1</div><div class="stat-label">Google Rating</div></div>
+                    <div><div class="stat-number">8+</div><div class="stat-label">Happy Reviews</div></div>
+                    <div><div class="stat-number">2018</div><div class="stat-label">Year Established</div></div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- MENU -->
-<section id="menu">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow">Signature Menu</span>
-      <h2>A menu built around the grill.</h2>
-      <p>Sample selections below — confirm current dishes and pricing directly with DELLUNA before publishing.</p>
-    </div>
-
-    <div class="menu-tabs" role="tablist">
-      <button class="tab-btn active" data-tab="starters">Starters</button>
-      <button class="tab-btn" data-tab="mains">Main Meals</button>
-      <button class="tab-btn" data-tab="grills">Grills</button>
-      <button class="tab-btn" data-tab="pizza">Pizza</button>
-      <button class="tab-btn" data-tab="drinks">Drinks</button>
-      <button class="tab-btn" data-tab="specials">Chef Specials</button>
-    </div>
-
-    <div class="menu-panel active" data-panel="starters">
-      <div class="menu-grid">
-        <div class="menu-item"><div><div class="menu-item-name">Suya Platter</div><div class="menu-item-desc">Sample item — spiced grilled beef strips, onions, tomato</div></div><div class="menu-item-price">₦ —</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Peppered Gizzard</div><div class="menu-item-desc">Sample item — sautéed in house pepper sauce</div></div><div class="menu-item-price">₦ —</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Spring Rolls</div><div class="menu-item-desc">Sample item — served with dipping sauce</div></div><div class="menu-item-price">₦ —</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Grilled Corn Salad</div><div class="menu-item-desc">Sample item — light starter, seasonal</div></div><div class="menu-item-price">₦ —</div></div>
-      </div>
-    </div>
-
-    <div class="menu-panel" data-panel="mains">
-      <div class="menu-grid">
-        <div class="menu-item"><div><div class="menu-item-name">Jollof Rice & Grilled Chicken</div><div class="menu-item-desc">Sample item — house jollof, choice of protein</div></div><div class="menu-item-price">₦ —</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Fish and Chips</div><div class="menu-item-desc">Menu highlight — as noted by guests</div></div><div class="menu-item-price">₦ —</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Fried Rice Special</div><div class="menu-item-desc">Sample item — mixed vegetables, choice of protein</div></div><div class="menu-item-price">₦ —</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Pasta Alfredo</div><div class="menu-item-desc">Sample item — creamy sauce, grilled chicken option</div></div><div class="menu-item-price">₦ —</div></div>
-      </div>
-    </div>
-
-    <div class="menu-panel" data-panel="grills">
-      <div class="menu-grid">
-        <div class="menu-item"><div><div class="menu-item-name">Mixed Grill Platter</div><div class="menu-item-desc">Sample item — beef, chicken, and turkey selections</div></div><div class="menu-item-price">₦ —</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Grilled Catfish</div><div class="menu-item-desc">Sample item — whole fish, house spice rub</div></div><div class="menu-item-price">₦ —</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Suya Skewers</div><div class="menu-item-desc">Sample item — classic Northern-style seasoning</div></div><div class="menu-item-price">₦ —</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Grilled Turkey</div><div class="menu-item-desc">Sample item — served with sides</div></div><div class="menu-item-price">₦ —</div></div>
-      </div>
-    </div>
-
-    <div class="menu-panel" data-panel="pizza">
-      <div class="menu-grid">
-        <div class="menu-item"><div><div class="menu-item-name">Beef Pizza</div><div class="menu-item-desc">Menu highlight — as noted by guests</div></div><div class="menu-item-price">₦ —</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Chicken Pizza</div><div class="menu-item-desc">Sample item — grilled chicken, house cheese blend</div></div><div class="menu-item-price">₦ —</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Vegetable Supreme</div><div class="menu-item-desc">Sample item — seasonal vegetable toppings</div></div><div class="menu-item-price">₦ —</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Margherita</div><div class="menu-item-desc">Sample item — classic tomato and mozzarella</div></div><div class="menu-item-price">₦ —</div></div>
-      </div>
-    </div>
-
-    <div class="menu-panel" data-panel="drinks">
-      <div class="menu-grid">
-        <div class="menu-item"><div><div class="menu-item-name">Fresh Juice Selection</div><div class="menu-item-desc">Sample item — seasonal fruit blends</div></div><div class="menu-item-price">₦ —</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Smoothies</div><div class="menu-item-desc">Sample item — choice of fruit base</div></div><div class="menu-item-price">₦ —</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Soft Drinks</div><div class="menu-item-desc">Sample item — assorted bottled options</div></div><div class="menu-item-price">₦ —</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Mocktails</div><div class="menu-item-desc">Sample item — house-made, non-alcoholic</div></div><div class="menu-item-price">₦ —</div></div>
-      </div>
-    </div>
-
-    <div class="menu-panel" data-panel="specials">
-      <div class="menu-grid">
-        <div class="menu-item"><div><div class="menu-item-name">Chef's Grill Board</div><div class="menu-item-desc">Sample item — rotating seasonal selection</div></div><div class="menu-item-price">₦ —</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Weekend Special</div><div class="menu-item-desc">Sample item — ask your server for today's feature</div></div><div class="menu-item-price">₦ —</div></div>
-      </div>
-    </div>
-
-    <p class="menu-note">Sample menu content shown for layout purposes. All dish names, descriptions, and prices should be confirmed and updated with DELLUNA's current offerings before this site goes live.</p>
-  </div>
-</section>
-
-<!-- WHY VISIT -->
-<section class="why">
-  <div class="container">
-    <div class="section-head center reveal" style="margin-left:auto;margin-right:auto;">
-      <span class="eyebrow">Why Visit</span>
-      <h2>Comfort, speed, and a premium standard.</h2>
-    </div>
-    <div class="why-grid">
-      <div class="why-card reveal"><span class="icon">🛋️</span><h3>Comfort</h3><p>Spacious, naturally lit seating designed for long, relaxed meals.</p></div>
-      <div class="why-card reveal"><span class="icon">⚡</span><h3>Fast Service</h3><p>Attentive, efficient service from order to table.</p></div>
-      <div class="why-card reveal"><span class="icon">🚗</span><h3>Delivery</h3><p>Enjoy DELLUNA at home with reliable delivery across Kaduna.</p></div>
-      <div class="why-card reveal"><span class="icon">✨</span><h3>Premium Experience</h3><p>Elevated presentation and atmosphere at every visit.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- GALLERY -->
-<section id="gallery">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow">Gallery</span>
-      <h2>A look inside DELLUNA.</h2>
-      <p>Photo placeholders — replace with real interior, plating, and event photography.</p>
-    </div>
-    <div class="gallery-grid">
-      <a href="#" class="gallery-item reveal"><div class="gallery-cap">Dining Room — Natural Light Windows</div></a>
-      <a href="#" class="gallery-item reveal"><div class="gallery-cap">Grill Station</div></a>
-      <a href="#" class="gallery-item reveal"><div class="gallery-cap">Signature Plating</div></a>
-      <a href="#" class="gallery-item reveal"><div class="gallery-cap">Evening Ambience</div></a>
-      <a href="#" class="gallery-item reveal"><div class="gallery-cap">Pizza & Grills</div></a>
-      <a href="#" class="gallery-item reveal"><div class="gallery-cap">Private Seating Area</div></a>
-    </div>
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section class="why">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow">Guest Experience</span>
-      <h2>What guests consistently notice.</h2>
-      <p>General themes from guest feedback — shown without direct quotes.</p>
-    </div>
-    <div class="reviews-grid">
-      <div class="review-card reveal">
-        <div class="stars">★★★★☆</div>
-        <h3>Food Quality</h3>
-        <p>Guests regularly highlight the variety and quality of dishes, from grills to pizza and chef specials.</p>
-      </div>
-      <div class="review-card reveal">
-        <div class="stars">★★★★☆</div>
-        <h3>Atmosphere</h3>
-        <p>The spacious, well-lit dining room is frequently mentioned as a highlight of the overall experience.</p>
-      </div>
-      <div class="review-card reveal">
-        <div class="stars">★★★★☆</div>
-        <h3>Service</h3>
-        <p>Feedback points to attentive service, with appreciation for how orders are handled during busier hours.</p>
-      </div>
-    </div>
-    <div class="rating-strip reveal">
-      <strong>4.2 ★</strong>
-      <span>Based on 266+ public guest ratings</span>
-      <span>·</span>
-      <span>Dine-in · Kerbside Pickup · Delivery</span>
-    </div>
-  </div>
-</section>
-
-<!-- RESERVATIONS -->
-<section class="reserve" id="reservations">
-  <div class="container reserve-grid">
-    <div class="reserve-info reveal">
-      <span class="eyebrow">Reservations</span>
-      <h2>Reserve your table at DELLUNA.</h2>
-      <p>Fill in your details and our team will confirm your reservation, or reach us directly by phone or WhatsApp for same-day bookings.</p>
-      <a href="tel:+2349040508888" class="btn btn-outline">Call 0904 050 8888</a>
-      <a href="https://wa.me/2349040508888" class="btn btn-primary" target="_blank" rel="noopener">Message on WhatsApp</a>
-    </div>
-    <form class="reserve-form reveal" id="reserveForm">
-      <div class="form-row">
-        <div class="field full">
-          <label for="rname">Full Name</label>
-          <input type="text" id="rname" placeholder="Your name" required>
+    <!-- MENU PREVIEW -->
+    <section id="menu">
+        <div class="container">
+            <div class="center-text">
+                <h2 class="section-title reveal">Our <span>Menu</span></h2>
+                <div class="section-divider"></div>
+                <p class="section-sub">Explore our delicious offerings — crafted with fresh ingredients and served with care.</p>
+            </div>
+            <div class="menu-grid">
+                <div class="menu-card reveal">
+                    <div class="icon-wrap">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#E8694A" stroke-width="1.2"><circle cx="12" cy="12" r="8"/><path d="M4 4 L8 8 M20 4 L16 8 M4 20 L8 16 M20 20 L16 16"/></svg>
+                    </div>
+                    <h4>Local Dishes</h4>
+                    <p>Authentic Northern Nigerian cuisine prepared with traditional recipes.</p>
+                    <span class="price">From ₦1,500</span>
+                    <a href="#contact" class="view-link">Order Now →</a>
+                </div>
+                <div class="menu-card reveal">
+                    <div class="icon-wrap">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#E8694A" stroke-width="1.2"><path d="M4 4h16v16H4z"/><circle cx="12" cy="12" r="3"/></svg>
+                    </div>
+                    <h4>Continental</h4>
+                    <p>International dishes with a local touch — pasta, grilled meats, and more.</p>
+                    <span class="price">From ₦2,000</span>
+                    <a href="#contact" class="view-link">Order Now →</a>
+                </div>
+                <div class="menu-card reveal">
+                    <div class="icon-wrap">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#E8694A" stroke-width="1.2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M8 4v2M16 4v2M2 10h20"/></svg>
+                    </div>
+                    <h4>Beverages</h4>
+                    <p>Fresh drinks, smoothies, and hot beverages to complement your meal.</p>
+                    <span class="price">From ₦500</span>
+                    <a href="#contact" class="view-link">Order Now →</a>
+                </div>
+                <div class="menu-card reveal">
+                    <div class="icon-wrap">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#E8694A" stroke-width="1.2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    </div>
+                    <h4>Special Combos</h4>
+                    <p>Value-packed meal combinations perfect for lunch or dinner.</p>
+                    <span class="price">From ₦3,000</span>
+                    <a href="#contact" class="view-link">Order Now →</a>
+                </div>
+            </div>
+            <p style="text-align:center;color:var(--gray-muted);font-size:0.85rem;margin-top:32px;font-weight:300;">
+                For full menu details and prices, visit our website or contact us directly.
+            </p>
         </div>
-      </div>
-      <div class="form-row">
-        <div class="field">
-          <label for="rphone">Phone Number</label>
-          <input type="tel" id="rphone" placeholder="080..." required>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section id="why">
+        <div class="container">
+            <div class="center-text">
+                <h2 class="section-title reveal">Why <span>Choose Us</span></h2>
+                <div class="section-divider"></div>
+                <p class="section-sub">We're committed to providing you with an exceptional dining experience.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-item reveal">
+                    <div class="icon-wrap">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#E8694A" stroke-width="1.5"><path d="M12 2L4 5v7a8 8 0 0 0 8 8 8 8 0 0 0 8-8V5l-8-3z"/><path d="M9 12l2 2 4-4"/></svg>
+                    </div>
+                    <h4>Hygienic Environment</h4>
+                    <p>We maintain the highest standards of cleanliness and food safety.</p>
+                </div>
+                <div class="why-item reveal">
+                    <div class="icon-wrap">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#E8694A" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+                    </div>
+                    <h4>Fresh Ingredients</h4>
+                    <p>Every dish is made with fresh, quality ingredients sourced locally.</p>
+                </div>
+                <div class="why-item reveal">
+                    <div class="icon-wrap">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#E8694A" stroke-width="1.5"><path d="M21 12a9 9 0 0 1-9 9m9-9a9 9 0 0 0-9-9m9 9H3m9 9a9 9 0 0 1-9-9m9 9c1.66 0 3-4.03 3-9s-1.34-9-3-9m0 18c-1.66 0-3-4.03-3-9s1.34-9 3-9"/></svg>
+                    </div>
+                    <h4>Conducive Atmosphere</h4>
+                    <p>A warm, welcoming space perfect for family meals and gatherings.</p>
+                </div>
+                <div class="why-item reveal">
+                    <div class="icon-wrap">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#E8694A" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    </div>
+                    <h4>Quick Service</h4>
+                    <p>We value your time. Enjoy fast, friendly service every visit.</p>
+                </div>
+            </div>
         </div>
-        <div class="field">
-          <label for="rguests">Guests</label>
-          <select id="rguests" required>
-            <option value="">Select</option>
-            <option>1–2</option><option>3–4</option><option>5–8</option><option>9+</option>
-          </select>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials">
+        <div class="container">
+            <div class="center-text">
+                <h2 class="section-title reveal">What Our <span>Guests</span> Say</h2>
+                <div class="section-divider"></div>
+                <p class="section-sub">Real reviews from our valued customers.</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card reveal">
+                    <div class="stars">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#E8694A"><polygon points="12,2 15.09,8.5 22,9.5 17,14.5 18.18,21 12,17.5 5.82,21 7,14.5 2,9.5 8.91,8.5"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#E8694A"><polygon points="12,2 15.09,8.5 22,9.5 17,14.5 18.18,21 12,17.5 5.82,21 7,14.5 2,9.5 8.91,8.5"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#E8694A"><polygon points="12,2 15.09,8.5 22,9.5 17,14.5 18.18,21 12,17.5 5.82,21 7,14.5 2,9.5 8.91,8.5"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#E8694A"><polygon points="12,2 15.09,8.5 22,9.5 17,14.5 18.18,21 12,17.5 5.82,21 7,14.5 2,9.5 8.91,8.5"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#E8694A"><polygon points="12,2 15.09,8.5 22,9.5 17,14.5 18.18,21 12,17.5 5.82,21 7,14.5 2,9.5 8.91,8.5"/></svg>
+                    </div>
+                    <blockquote>"Very hygienic and conducive environment. A great place to enjoy a meal in Daura."</blockquote>
+                    <div class="author">
+                        <div class="avatar">AS</div>
+                        <div><cite>ABBAH SHEHU DAURA</cite><br /><span style="color:var(--gray-muted);font-size:0.75rem;">Google Review</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="stars">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#E8694A"><polygon points="12,2 15.09,8.5 22,9.5 17,14.5 18.18,21 12,17.5 5.82,21 7,14.5 2,9.5 8.91,8.5"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#E8694A"><polygon points="12,2 15.09,8.5 22,9.5 17,14.5 18.18,21 12,17.5 5.82,21 7,14.5 2,9.5 8.91,8.5"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#E8694A"><polygon points="12,2 15.09,8.5 22,9.5 17,14.5 18.18,21 12,17.5 5.82,21 7,14.5 2,9.5 8.91,8.5"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#E8694A"><polygon points="12,2 15.09,8.5 22,9.5 17,14.5 18.18,21 12,17.5 5.82,21 7,14.5 2,9.5 8.91,8.5"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#CCCCCC" stroke-width="2"><polygon points="12,2 15.09,8.5 22,9.5 17,14.5 18.18,21 12,17.5 5.82,21 7,14.5 2,9.5 8.91,8.5"/></svg>
+                    </div>
+                    <blockquote>"Conducive atmosphere. A decent place to eat in Daura."</blockquote>
+                    <div class="author">
+                        <div class="avatar">IO</div>
+                        <div><cite>Ihechi Okereke</cite><br /><span style="color:var(--gray-muted);font-size:0.75rem;">Google Review</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="stars">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#E8694A"><polygon points="12,2 15.09,8.5 22,9.5 17,14.5 18.18,21 12,17.5 5.82,21 7,14.5 2,9.5 8.91,8.5"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#E8694A"><polygon points="12,2 15.09,8.5 22,9.5 17,14.5 18.18,21 12,17.5 5.82,21 7,14.5 2,9.5 8.91,8.5"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#E8694A"><polygon points="12,2 15.09,8.5 22,9.5 17,14.5 18.18,21 12,17.5 5.82,21 7,14.5 2,9.5 8.91,8.5"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#E8694A"><polygon points="12,2 15.09,8.5 22,9.5 17,14.5 18.18,21 12,17.5 5.82,21 7,14.5 2,9.5 8.91,8.5"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#E8694A"><polygon points="12,2 15.09,8.5 22,9.5 17,14.5 18.18,21 12,17.5 5.82,21 7,14.5 2,9.5 8.91,8.5"/></svg>
+                    </div>
+                    <blockquote>"Clean environment and friendly staff. A good place to grab a meal in Daura."</blockquote>
+                    <div class="author">
+                        <div class="avatar">AM</div>
+                        <div><cite>Ahmed Mahmood</cite><br /><span style="color:var(--gray-muted);font-size:0.75rem;">Google Review</span></div>
+                    </div>
+                    <div class="response">
+                        "We're sorry to hear about your experience. This is not the standard we strive for. We are taking your feedback seriously to improve our food warming process and customer service. Thank you for letting us know."
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="form-row">
-        <div class="field">
-          <label for="rdate">Date</label>
-          <input type="date" id="rdate" required>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery">
+        <div class="container">
+            <div class="center-text">
+                <h2 class="section-title reveal">Photo <span>Gallery</span></h2>
+                <div class="section-divider"></div>
+                <p class="section-sub">A glimpse into our warm and inviting space.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item reveal">
+                    <img src="https://placehold.co/600x600/1A2A3A/E8694A?text=Dining+Area" alt="Dining area at New Era Eatery" />
+                    <div class="overlay"><span>Dining Area</span></div>
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="https://placehold.co/600x600/1A2A3A/E8694A?text=Food+1" alt="Delicious meal" />
+                    <div class="overlay"><span>Our Food</span></div>
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="https://placehold.co/600x600/1A2A3A/E8694A?text=Food+2" alt="Another delicious meal" />
+                    <div class="overlay"><span>Our Food</span></div>
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="https://placehold.co/600x600/1A2A3A/E8694A?text=Interior" alt="Restaurant interior" />
+                    <div class="overlay"><span>Interior</span></div>
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="https://placehold.co/600x600/1A2A3A/E8694A?text=Food+3" alt="Tasty meal" />
+                    <div class="overlay"><span>Our Food</span></div>
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="https://placehold.co/600x600/1A2A3A/E8694A?text=Exterior" alt="Restaurant exterior" />
+                    <div class="overlay"><span>Exterior</span></div>
+                </div>
+            </div>
+            <p style="text-align:center;color:var(--gray-muted);font-size:0.75rem;margin-top:24px;opacity:0.5;letter-spacing:1px;">
+                Replace placeholder images with actual restaurant photography.
+            </p>
         </div>
-        <div class="field">
-          <label for="rtime">Time</label>
-          <input type="time" id="rtime" required>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" style="background:var(--cream);">
+        <div class="container">
+            <div class="center-text">
+                <h2 class="section-title reveal">Frequently Asked <span>Questions</span></h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">What are your opening hours? <span class="arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E8694A" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+                    <div class="faq-answer">We are open daily from 11:00 AM to 12:00 AM (midnight).</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Do you offer takeaway? <span class="arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E8694A" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+                    <div class="faq-answer">Yes, we offer both dine-in and takeaway services. Simply place your order and pick it up at your convenience.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Do you cater for events? <span class="arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E8694A" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+                    <div class="faq-answer">Yes, we offer catering services for parties, meetings, and private events. Contact us for a custom quote.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What type of food do you serve? <span class="arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E8694A" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+                    <div class="faq-answer">We serve a mix of authentic Northern Nigerian local dishes and continental cuisine.</div>
+                </div>
+            </div>
         </div>
-      </div>
-      <button type="submit" class="btn btn-primary">Confirm Reservation</button>
-    </form>
-  </div>
-</section>
+    </section>
 
-<!-- CONTACT -->
-<section id="contact">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow">Visit Us</span>
-      <h2>Find DELLUNA in Ungwan Rimi.</h2>
-    </div>
-    <div class="contact-grid reveal">
-      <div class="contact-block">
-        <h3>Location & Contact</h3>
-        <p>21 Kashim Ibrahim Road, Ungwan Rimi, Kaduna</p>
-        <a href="tel:+2349040508888">0904 050 8888</a>
-        <a href="https://wa.me/2349040508888" target="_blank" rel="noopener">Chat on WhatsApp</a>
-        <h3 style="margin-top:32px;">Opening Hours</h3>
-        <div class="hours-list">
-          <div><span>Mon – Fri</span><span>Placeholder</span></div>
-          <div><span>Saturday</span><span>Placeholder</span></div>
-          <div><span>Sunday</span><span>Placeholder</span></div>
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="container">
+            <div class="center-text">
+                <h2 class="section-title reveal">Get in <span>Touch</span></h2>
+                <div class="section-divider"></div>
+                <p class="section-sub">We'd love to hear from you. Reach out for orders, reservations, or inquiries.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <p>
+                        <span class="icon-wrap">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8694A" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 22c4-4 8-7.5 8-12a8 8 0 0 0-16 0c0 4.5 4 8 8 12z"/></svg>
+                        </span>
+                        <span class="label">Address</span> No 99 Kongolam Road, Daura 824101, Katsina
+                    </p>
+                    <p>
+                        <span class="icon-wrap">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8694A" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </span>
+                        <span class="label">Phone</span> <a href="tel:+2347061481265">0706 148 1265</a>
+                    </p>
+                    <p>
+                        <span class="icon-wrap">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8694A" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </span>
+                        <span class="label">Hours</span> Mon–Sun: 11:00 AM – 12:00 AM
+                    </p>
+                    <p>
+                        <span class="icon-wrap">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8694A" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+                        </span>
+                        <span class="label">Website</span> <a href="https://neweraeatery.com.ng" target="_blank">neweraeatery.com.ng</a>
+                    </p>
+                    <div style="margin-top:20px;">
+                        <a href="https://wa.me/2347061481265" target="_blank" style="background:#25D366; padding:12px 28px; border-radius:30px; display:inline-flex; align-items:center; gap:10px; color:#fff; font-weight:500; text-decoration:none; letter-spacing:1px; font-size:0.75rem; transition:opacity 0.3s;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            Chat on WhatsApp
+                        </a>
+                    </div>
+                    <div class="map-placeholder">
+                        <iframe
+                            src="https://www.openstreetmap.org/export/embed.html?bbox=8.30%2C12.85%2C8.40%2C12.95&layer=mapnik"
+                            width="100%"
+                            height="100%"
+                            style="border:0;"
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+                <div class="reveal">
+                    <form class="contact-form" id="contactForm" onsubmit="event.preventDefault(); alert('Thank you! We will get back to you shortly.');">
+                        <input type="text" placeholder="Your Name" required />
+                        <input type="email" placeholder="Your Email" required />
+                        <input type="tel" placeholder="Your Phone" required />
+                        <select required>
+                            <option value="">What are you interested in?</option>
+                            <option value="dine-in">Dine-in Reservation</option>
+                            <option value="takeaway">Takeaway Order</option>
+                            <option value="catering">Catering</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <textarea placeholder="Your Message..." required></textarea>
+                        <button type="submit">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="map-placeholder">MAP PLACEHOLDER<br>Embed Google Maps location for<br>21 Kashim Ibrahim Road, Ungwan Rimi, Kaduna</div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="#home" class="logo">DELLUNA <small>COOK &amp; GRILLS · KADUNA</small></a>
-        <p>A premium dining concept in Ungwan Rimi, Kaduna — grills, pizza, and chef specials in a spacious, elegant setting.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Explore</h4>
-        <a href="#menu">Menu</a>
-        <a href="#experience">Experience</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#reservations">Reservations</a>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <a href="tel:+2349040508888">0904 050 8888</a>
-        <a href="https://wa.me/2349040508888" target="_blank" rel="noopener">WhatsApp</a>
-        <a href="#contact">Get Directions</a>
-      </div>
-      <div class="footer-col">
-        <h4>Service</h4>
-        <a href="#">Dine-in</a>
-        <a href="#">Kerbside Pickup</a>
-        <a href="#">Delivery</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 DELLUNA Cook and Grills Kaduna. All rights reserved.</span>
-      <span>Website concept design</span>
-    </div>
-    <p class="disclaimer">This is an independently produced website concept created from publicly available business information and is not an official website of DELLUNA Cook and Grills Kaduna, nor does it imply any partnership, endorsement, or affiliation. Menu items, prices, and hours shown are sample placeholders and must be verified and replaced with accurate, current information before publication.</p>
-  </div>
-</footer>
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4>New Era Eatery</h4>
+                    <p style="font-weight:300;font-size:0.9rem;">Daura's premier restaurant serving delicious local and continental dishes in a warm, hygienic environment.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <a href="#about">About</a>
+                    <a href="#menu">Menu</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div>
+                    <h4>Connect</h4>
+                    <a href="tel:+2347061481265">0706 148 1265</a>
+                    <a href="https://wa.me/2347061481265" target="_blank">WhatsApp</a>
+                    <a href="https://neweraeatery.com.ng" target="_blank">Website</a>
+                    <a href="#contact">Order Now</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 <span>New Era Eatery</span> · All rights reserved
+            </div>
+        </div>
+    </footer>
 
-<a href="https://wa.me/2349040508888" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.42-1.42a9.87 9.87 0 0 0 4.62 1.18h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67a8.2 8.2 0 0 1 5.83 2.42 8.19 8.19 0 0 1 2.41 5.82c0 4.55-3.7 8.24-8.25 8.24a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.38c0-4.55 3.7-8.24 8.25-8.24m-4.52 4.7c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.03 0 1.2.87 2.36.99 2.52.12.16 1.7 2.7 4.18 3.68 2.06.82 2.48.65 2.93.61.45-.04 1.45-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28-.24-.12-1.45-.72-1.68-.8-.22-.08-.39-.12-.55.12-.16.24-.63.8-.78.97-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.35-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.36-.76-1.86-.2-.48-.4-.42-.55-.42h-.47z"/></svg>
-</a>
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/2347061481265?text=Hello%20New%20Era%20Eatery!%20I%20found%20your%20website%20and%20would%20like%20to%20place%20an%20order." target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="#ffffff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
 
-<script>
-  // Mobile menu toggle
-  const hamburgerBtn = document.getElementById('hamburgerBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-  hamburgerBtn.addEventListener('click', () => {
-    const open = mobileMenu.classList.toggle('open');
-    hamburgerBtn.setAttribute('aria-expanded', open);
-  });
-  document.querySelectorAll('.mobile-menu a').forEach(a => {
-    a.addEventListener('click', () => mobileMenu.classList.remove('open'));
-  });
+    <!-- BACK TO TOP -->
+    <a href="#" class="back-top" id="backTop" aria-label="Back to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+    </a>
 
-  // Menu tabs
-  const tabBtns = document.querySelectorAll('.tab-btn');
-  const panels = document.querySelectorAll('.menu-panel');
-  tabBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      tabBtns.forEach(b => b.classList.remove('active'));
-      panels.forEach(p => p.classList.remove('active'));
-      btn.classList.add('active');
-      document.querySelector('[data-panel="' + btn.dataset.tab + '"]').classList.add('active');
-    });
-  });
+    <script>
+        // ----- LOADER -----
+        window.addEventListener('load', () => {
+            document.getElementById('loader').classList.add('hidden');
+        });
 
-  // Scroll reveal
-  const revealEls = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in');
-        io.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-  revealEls.forEach(el => io.observe(el));
+        // ----- HAMBURGER -----
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('open');
+        });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('open');
+            });
+        });
 
-  // Ember particles (hero)
-  const emberField = document.getElementById('emberField');
-  const emberCount = window.innerWidth < 700 ? 10 : 20;
-  for (let i = 0; i < emberCount; i++) {
-    const dot = document.createElement('div');
-    dot.className = 'ember-dot';
-    const size = 2 + Math.random() * 4;
-    dot.style.width = size + 'px';
-    dot.style.height = size + 'px';
-    dot.style.left = Math.random() * 100 + '%';
-    dot.style.setProperty('--drift', (Math.random() * 60 - 30) + 'px');
-    dot.style.animationDuration = (6 + Math.random() * 6) + 's';
-    dot.style.animationDelay = (Math.random() * 9) + 's';
-    emberField.appendChild(dot);
-  }
+        // ----- SCROLL REVEAL -----
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -40px 0px'
+        });
+        revealElements.forEach(el => revealObserver.observe(el));
 
-  // Reservation form (demo submit)
-  document.getElementById('reserveForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const btn = this.querySelector('button[type="submit"]');
-    const original = btn.textContent;
-    btn.textContent = 'Request Sent ✓';
-    btn.style.background = '#4C7A3D';
-    setTimeout(() => {
-      btn.textContent = original;
-      btn.style.background = '';
-      this.reset();
-    }, 2600);
-  });
+        // ----- FAQ ACCORDION -----
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const btn = item.querySelector('.faq-question');
+            btn.addEventListener('click', () => {
+                faqItems.forEach(other => {
+                    if (other !== item) other.classList.remove('active');
+                });
+                item.classList.toggle('active');
+            });
+        });
+        if (faqItems.length) faqItems[0].classList.add('active');
 
-  // Lazy-load ready hook for real images (placeholder-safe)
-  document.querySelectorAll('img[loading="lazy"]').forEach(img => {
-    if (!img.complete) img.style.opacity = 0;
-    img.addEventListener('load', () => img.style.opacity = 1);
-  });
-</script>
+        // ----- BACK TO TOP -----
+        const backTop = document.getElementById('backTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                backTop.classList.add('visible');
+            } else {
+                backTop.classList.remove('visible');
+            }
+
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+        backTop.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ----- SCROLL SPY -----
+        const sections = document.querySelectorAll('section[id]');
+        const navLinkItems = document.querySelectorAll('.nav-links a:not(.nav-cta)');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 140;
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+            navLinkItems.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // ----- SMOOTH SCROLL -----
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
